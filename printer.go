@@ -35,7 +35,7 @@ func main() {
 
 	runtime.LockOSThread()
 	gtk.Init(nil)
-	win, err := gtk.WindowNew(gtk.WINDOW_TOPLEVEL)
+	win, err := gtk.OffscreenWindowNew()
 	if err != nil {
 		log.Fatalf("%s\n", err)
 	}
