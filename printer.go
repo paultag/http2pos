@@ -67,6 +67,7 @@ func main() {
 
 				printer := epspos.New(conn)
 				ohshit(printer.Init())
+				ohshit(printer.Speed(4))
 				ohshit(printer.Justification(epson.Center))
 				ohshit(printer.PrintImage(*gray))
 				ohshit(printer.Feed(4))
