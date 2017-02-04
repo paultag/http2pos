@@ -14,7 +14,6 @@ import (
 	"runtime"
 
 	"pault.ag/go/epson"
-	"pault.ag/go/epson/drivers/epspos"
 
 	"github.com/gotk3/gotk3/glib"
 	"github.com/gotk3/gotk3/gtk"
@@ -65,7 +64,7 @@ func main() {
 					panic(err)
 				}
 
-				printer := epspos.New(conn)
+				printer := epson.New(conn)
 				ohshit(printer.Init())
 				ohshit(printer.Speed(4))
 				ohshit(printer.Justification(epson.Center))
